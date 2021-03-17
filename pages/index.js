@@ -15,7 +15,7 @@ export default function Home({ portfolio }) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(`${server}/api/portfolio/`, {
     headers: {
       Accept: "application/json, text/plain, */*",
