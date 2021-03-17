@@ -1,5 +1,4 @@
 import Projects from "../components/layouts/Projects";
-import { server } from "../config";
 
 function projects({ projects }) {
   return <Projects projects={projects}></Projects>;
@@ -8,7 +7,9 @@ function projects({ projects }) {
 export default projects;
 
 export const getStaticProps = async () => {
-  const projectRes = await fetch(`${server}/api/portfolio/projects/`);
+  const projectRes = await fetch(
+    `http://localhost:3000/api/portfolio/projects/`
+  );
 
   const projects = await projectRes.json();
 
