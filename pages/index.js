@@ -16,18 +16,14 @@ export default function Home({ portfolio }) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${server}/api/portfolio/`, {
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "User-Agent": "*",
-    },
-  });
+  const res = await fetch(`${server}/api/portfolio/`);
 
   const portfolio = await res.json();
 
   return {
     props: {
       portfolio,
+      fallback: false,
     },
   };
 };

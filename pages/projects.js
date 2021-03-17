@@ -15,6 +15,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       projects,
+      fallback: false,
     },
   };
 };
