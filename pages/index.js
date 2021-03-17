@@ -2,6 +2,7 @@ import Animation from "../components/layouts/components/Animation";
 import Who from "../components/layouts/components/Who";
 import Chart from "../components/layouts/components/Chart";
 import About from "../components/layouts/components/About";
+import { server } from "../config";
 
 export default function Home({ portfolio }) {
   return (
@@ -15,7 +16,12 @@ export default function Home({ portfolio }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`http://localhost:3000/api/portfolio/`);
+  const res = await fetch(`${server}/api/portfolio/`, {
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "User-Agent": "*",
+    },
+  });
 
   const portfolio = await res.json();
 
