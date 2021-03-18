@@ -94,7 +94,7 @@ export const portfolio = [
       },
       {
         id: 6,
-        favicon_apple: "https://t-dev.no/api/t-dev/favicon-apple.png",
+        favicon_apple: "https://t-dev.no/api/t-dev/favicon.ico",
       },
       {
         id: 7,
