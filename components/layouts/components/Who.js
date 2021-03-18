@@ -1,6 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import Image from "next/image";
 
 export const AboutContainer = styled.div`
   position: relative;
@@ -72,6 +70,20 @@ const TechHeadline = styled.p`
   }
 `;
 
+const TechStackImage = styled.img`
+  height: 60px;
+  @media (max-width: 700px) {
+    height: 40px;
+  }
+`;
+
+const TechStackImageFeather = styled.img`
+  height: 80px;
+  @media (max-width: 700px) {
+    height: 60px;
+  }
+`;
+
 function About() {
   return (
     <AboutContainer>
@@ -79,16 +91,16 @@ function About() {
       <OrangeLine></OrangeLine>
       <TechStackContainer>
         <TechStack>
-          <Image src="/sales-icon.svg" width={60} height={70}></Image>
+          <TechStackImage src="https://t-dev.no/api/t-dev/sales-icon.svg"></TechStackImage>
         </TechStack>
         <TechStack>
-          <Image src="/teamwork-icon.svg" width={60} height={70}></Image>
+          <TechStackImage src="https://t-dev.no/api/t-dev/teamwork-icon.svg"></TechStackImage>
         </TechStack>
         <TechStack>
-          <Image src="/noroff-icon.png" width={30} height={50}></Image>
+          <TechStackImage src="https://t-dev.no/api/t-dev/noroff-icon.png"></TechStackImage>
         </TechStack>
         <TechStack>
-          <Image src="/feather-icon.svg" width={70} height={70}></Image>
+          <TechStackImageFeather src="https://t-dev.no/api/t-dev/feather-icon.svg"></TechStackImageFeather>
         </TechStack>
       </TechStackContainer>
       <TechStackContainer>

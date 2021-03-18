@@ -1,8 +1,17 @@
 import Projects from "../components/layouts/Projects";
+import Meta from "../components/Meta";
 import { server } from "../config";
 
 function projects({ projects }) {
-  return <Projects projects={projects}></Projects>;
+  return (
+    <>
+      <Meta
+        title={projects[3].title}
+        description={projects[3].description}
+      ></Meta>
+      <Projects projects={projects}></Projects>
+    </>
+  );
 }
 
 export default projects;

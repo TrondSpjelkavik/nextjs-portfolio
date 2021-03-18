@@ -39,4 +39,10 @@ export const projects = [
     book: "http://www.gopl.io/",
     image: "https://t-dev.no/api/t-dev/gophercolor.png",
   },
+  {
+    id: 4,
+    description:
+      "A collection of projects made by Trond Fuglseth Spjelkavik. Includes SpaceX microsite, E-commerce website and Go lang projects",
+    title: "Projects",
+  },
 ];

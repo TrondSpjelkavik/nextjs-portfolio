@@ -69,3 +69,9 @@ li {
 .github-icon:hover {
   color: #db6400;
 }
+
+.close-icon {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}

@@ -1,5 +1,7 @@
 import { PageContainer } from "./Projects";
 import { OrangeLine } from "./components/Who";
+import SuccessSend from "./components/SuccessSend";
+import { useState } from "react";
 import {
   FaLinkedinIn,
   FaFacebookF,
@@ -21,6 +23,9 @@ const ContactContainer = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @media (max-width: 800px) {
     height: 600px;
+  }
+  @media (max-width: 468px) {
+    top: 100px;
   }
   @media (max-width: 468px) and (max-height: 667px) {
     top: 80px !important;
@@ -160,11 +165,12 @@ const SocialIconsContainerContact = styled.div`
 `;
 
 function ContactFom() {
-  function closeWindow() {
-    const sendSuccess = document.querySelector(".send-success");
-    sendSuccess.style.display = "none";
-  }
+  const [send, setSend] = useState(false);
 
+  function sendEmail(e) {
+    e.preventDefault();
+    setSend(true);
+  }
   function toGithub() {
     window.open("https://github.com/TrondSpjelkavik");
   }
@@ -181,13 +187,14 @@ function ContactFom() {
 
   return (
     <PageContainer>
+      <SuccessSend send={send} setSend={setSend}></SuccessSend>
       <ContactContainer>
         <ContactHeadlineBox> </ContactHeadlineBox>
         <ContactHeadline>
           Contact<OrangeLine></OrangeLine>
         </ContactHeadline>
         <SubHeadlineContact>Let's work together</SubHeadlineContact>
-        <ContactForm>
+        <ContactForm onSubmit={sendEmail}>
           <LabelBox>From:</LabelBox>
           <InputContact
             className="input-text"
@@ -212,7 +219,9 @@ function ContactFom() {
             placeholder="Message.."
           ></TextareaContact>
 
-          <ContactButton type="sumbit">Send</ContactButton>
+          <ContactButton type="sumbit" onClick={() => setSend(!send)}>
+            Send
+          </ContactButton>
         </ContactForm>
         <SocialIconsContact>
           <SocialIconsContainerContact>

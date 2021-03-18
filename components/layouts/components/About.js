@@ -1,5 +1,4 @@
 import { AboutContainer, AboutHeadline, OrangeLine } from "./Who";
-import Image from "next/image";
 
 import styled from "styled-components";
 
@@ -43,17 +42,24 @@ const AboutMeParagraph = styled.p`
   }
 `;
 
+const PortfolioImg = styled.img`
+  padding-right: 40px;
+  height: 220px;
+  @media (max-width: 800px) {
+    padding: 0;
+  }
+`;
+
 function About({ portfolio }) {
   return (
     <AboutContainer>
       <AboutHeadline>About me</AboutHeadline>
       <OrangeLine></OrangeLine>
-      <AboutMeBox>
-        <div style={{ paddingRight: "40px" }}>
-          <Image src="/trond.png" width={225} height={225}></Image>
-        </div>
-        {portfolio.map((items) => (
-          <AboutMeText key={items.About}>
+      {portfolio.map((items) => (
+        <AboutMeBox key={items.About}>
+          <PortfolioImg src={items.Assets[6].trond}></PortfolioImg>
+
+          <AboutMeText>
             <AboutMeParagraph style={{ fontWeight: "700" }}>
               {items.About[0].text}
             </AboutMeParagraph>
@@ -61,8 +67,8 @@ function About({ portfolio }) {
             <AboutMeParagraph>{items.About[2].text}</AboutMeParagraph>
             <AboutMeParagraph>{items.About[3].text}</AboutMeParagraph>
           </AboutMeText>
-        ))}
-      </AboutMeBox>
+        </AboutMeBox>
+      ))}
     </AboutContainer>
   );
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 
 import { FaGithub } from "react-icons/fa";
 
@@ -70,12 +71,19 @@ export const ProjectImage = styled.img`
   top: 120px;
   right: 10px;
   height: 300px;
+  cursor: pointer;
+  z-index: 99;
+  transform: ${({ size }) =>
+    size ? "scale(1.5) translateX(-66%) " : "scale(1)"};
+  transition: 0.5s ease-in;
   @media (max-width: 800px) {
     display: none;
   }
 `;
 
 function Project({ projects, projectNumber }) {
+  const [size, setSize] = useState(false);
+
   let siteText = "";
   let buttonClass = "";
 
@@ -131,7 +139,11 @@ function Project({ projects, projectNumber }) {
           To github
         </FaGithub>
       </ProjectInfoButtonContainerSpacex>
-      <ProjectImage src={projects[projectNumber].image}></ProjectImage>
+      <ProjectImage
+        src={projects[projectNumber].image}
+        size={size}
+        onClick={() => setSize(!size)}
+      ></ProjectImage>
     </ProjectInfoContainer>
   );
 }

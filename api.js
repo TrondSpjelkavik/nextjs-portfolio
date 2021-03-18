@@ -71,5 +71,35 @@ export const portfolio = [
           "https://www.linkedin.com/in/trond-fuglseth-spjelkavik-80871552/",
       },
     ],
+    Assets: [
+      {
+        id: 1,
+        sales: "https://t-dev.no/api/t-dev/sales-icon.svg",
+      },
+      {
+        id: 2,
+        team_work: "https://t-dev.no/api/t-dev/teamwork-icon.svg",
+      },
+      {
+        id: 3,
+        noroff: "https://t-dev.no/api/t-dev/noroff-icon.png",
+      },
+      {
+        id: 4,
+        feather: "https://t-dev.no/api/t-dev/feather-icon.svg",
+      },
+      {
+        id: 5,
+        favicon_main: "https://t-dev.no/api/t-dev/favicon.ico",
+      },
+      {
+        id: 6,
+        favicon_apple: "https://t-dev.no/api/t-dev/favicon-apple.png",
+      },
+      {
+        id: 7,
+        trond: "https://t-dev.no/api/t-dev/trond.png",
+      },
+    ],
   },
 ];

@@ -22,7 +22,7 @@ const HamburgerItems = styled.ul`
     transition: 0.3 ease-in-out;
     top: 0;
     right: 0;
-    height: 400px;
+    height: 100vh;
     padding: 50px 0;
     width: 100vw;
     justify-content: space-around;
