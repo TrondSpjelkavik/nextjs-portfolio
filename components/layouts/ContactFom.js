@@ -2,12 +2,8 @@ import { PageContainer } from "./Projects";
 import { OrangeLine } from "./components/Who";
 import SuccessSend from "./components/SuccessSend";
 import { useState } from "react";
-import {
-  FaLinkedinIn,
-  FaFacebookF,
-  FaGithub,
-  FaWindowClose,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaFacebookF, FaGithub } from "react-icons/fa";
+import { useForm } from "react-hook-form";
 
 import styled from "styled-components";
 
@@ -167,10 +163,12 @@ const SocialIconsContainerContact = styled.div`
 function ContactFom() {
   const [send, setSend] = useState(false);
 
-  function sendEmail(e) {
-    e.preventDefault();
+  const { register, handleSubmit, errors } = useForm();
+
+  function sendEmail() {
     setSend(true);
   }
+
   function toGithub() {
     window.open("https://github.com/TrondSpjelkavik");
   }
@@ -194,7 +192,7 @@ function ContactFom() {
           Contact<OrangeLine></OrangeLine>
         </ContactHeadline>
         <SubHeadlineContact>Let's work together</SubHeadlineContact>
-        <ContactForm onSubmit={sendEmail}>
+        <ContactForm onSubmit={handleSubmit(sendEmail)}>
           <LabelBox>From:</LabelBox>
           <InputContact
             className="input-text"
@@ -202,7 +200,14 @@ function ContactFom() {
             type="text"
             name="name"
             placeholder="Name"
+            ref={register({ required: true, minLength: 2 })}
           ></InputContact>
+          {errors.name && errors.name.type === "required" && (
+            <p>Please type in your name</p>
+          )}
+          {errors.name && errors.name.type === "minLength" && (
+            <p>Please use 2 or more characters</p>
+          )}
 
           <InputContact
             className="input-text"
@@ -210,14 +215,36 @@ function ContactFom() {
             type="text"
             name="email"
             placeholder="E-mail"
+            ref={register({
+              required: true,
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+              },
+            })}
           ></InputContact>
+          {errors.email && errors.email.type === "required" && (
+            <p>Please enter a valid e-mail address</p>
+          )}
+          {errors.email && errors.email.type === "minLength" && (
+            <p>Please use 4 or more characters</p>
+          )}
+          {errors.email && errors.email.type === "pattern" && (
+            <p>Please enter a valid e-mail address</p>
+          )}
 
           <TextareaContact
             className="input-text"
             id="message"
             name="message"
             placeholder="Message.."
+            ref={register({ required: true, minLength: 4 })}
           ></TextareaContact>
+          {errors.message && errors.message.type === "required" && (
+            <p>Please write a message</p>
+          )}
+          {errors.message && errors.message.type === "minLength" && (
+            <p>Please use 4 or more characters</p>
+          )}
 
           <ContactButton type="submit" arial-label="send message">
             Send
