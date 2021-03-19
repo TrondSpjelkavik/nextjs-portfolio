@@ -27,8 +27,12 @@ const SendSuccessfully = styled.div`
   @media (max-width: 468px) {
     top: 100px;
   }
+  @media (max-width: 468px) and (max-height: 667px) {
+    top: 80px !important;
+  }
+
   @media (max-height: 859px) {
-    top: 200px;
+    top: 300px;
   }
   @media (max-height: 760px) {
     top: 150px;

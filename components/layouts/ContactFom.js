@@ -35,7 +35,7 @@ const ContactContainer = styled.div`
     top: 300px;
   }
   @media (max-height: 760px) {
-    top: 100px;
+    top: 150px;
   }
 `;
 const SubHeadlineContact = styled.h3`
@@ -219,7 +219,7 @@ function ContactFom() {
             placeholder="Message.."
           ></TextareaContact>
 
-          <ContactButton type="sumbit" onClick={() => setSend(!send)}>
+          <ContactButton type="submit" arial-label="send message">
             Send
           </ContactButton>
         </ContactForm>

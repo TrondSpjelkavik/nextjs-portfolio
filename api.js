@@ -9,7 +9,7 @@ export const portfolio = [
       {
         id: 2,
         text:
-          "I want to make a better web. One that is fast, easy to use, accessible to all and error-free. I started my journey to become a developer in october 2019, and after 14 years in sales I have found my passion. Learning new technologies and creating new projects are features I love in this profession.",
+          "I want to make a better web. One that is fast, easy to use, accessible to all and error-free. Started my journey to become a developer in october 2019, and after 14 years in sales I have found my passion. Learning new technologies and creating new projects are features I love in this profession.",
       },
       {
         id: 3,

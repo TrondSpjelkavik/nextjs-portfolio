@@ -128,10 +128,18 @@ function Project({ projects, projectNumber }) {
         {projects[projectNumber].paragraph}
       </ProjectInfoParagraph>
       <ProjectInfoButtonContainerSpacex>
-        <ProjectInfoButton className={buttonClass} onClick={toSite}>
+        <ProjectInfoButton
+          className={buttonClass}
+          onClick={toSite}
+          arial-label="To website"
+        >
           {siteText}
         </ProjectInfoButton>
-        <ProjectInfoButton className={buttonClassTwo} onClick={toGrades}>
+        <ProjectInfoButton
+          className={buttonClassTwo}
+          onClick={toGrades}
+          arial-label="To grades"
+        >
           {gradeText}
         </ProjectInfoButton>
 
@@ -143,6 +151,7 @@ function Project({ projects, projectNumber }) {
         src={projects[projectNumber].image}
         size={size}
         onClick={() => setSize(!size)}
+        alt="project image"
       ></ProjectImage>
     </ProjectInfoContainer>
   );

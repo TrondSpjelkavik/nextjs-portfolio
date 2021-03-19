@@ -14,7 +14,7 @@ export default function Home({ portfolio }) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const res = await fetch(`http://localhost:3000/api/portfolio/`);
 
   const portfolio = await res.json();

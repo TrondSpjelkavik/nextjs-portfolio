@@ -151,9 +151,11 @@ function Animation() {
       <MobilePolygon></MobilePolygon>
       <MainHeadline>Trond Fuglseth Spjelkavik</MainHeadline>
       <SubHeadline>Front-End Developer student</SubHeadline>
-      <FrontPageButton>
-        <Link href="/projects">View my work</Link>
-      </FrontPageButton>
+      <Link href="/projects">
+        <FrontPageButton aria-label="View my works">
+          View my works
+        </FrontPageButton>
+      </Link>
     </FrontPageContainer>
   );
 }

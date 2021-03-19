@@ -72,15 +72,28 @@ const TechHeadline = styled.p`
 
 const TechStackImage = styled.img`
   height: 60px;
+  width: 60px;
   @media (max-width: 700px) {
     height: 40px;
+    width: 40px;
+  }
+`;
+
+const TechStackNoroff = styled.img`
+  height: 78px;
+  width: 49px;
+  @media (max-width: 700px) {
+    height: 40px;
+    width: 25px;
   }
 `;
 
 const TechStackImageFeather = styled.img`
   height: 80px;
+  width: 80px;
   @media (max-width: 700px) {
     height: 60px;
+    width: 60px;
   }
 `;
 
@@ -91,16 +104,28 @@ function About() {
       <OrangeLine></OrangeLine>
       <TechStackContainer>
         <TechStack>
-          <TechStackImage src="https://t-dev.no/api/t-dev/sales-icon.svg"></TechStackImage>
+          <TechStackImage
+            src="https://t-dev.no/api/t-dev/sales-icon.svg"
+            alt="sales icon"
+          ></TechStackImage>
         </TechStack>
         <TechStack>
-          <TechStackImage src="https://t-dev.no/api/t-dev/teamwork-icon.svg"></TechStackImage>
+          <TechStackImage
+            src="https://t-dev.no/api/t-dev/teamwork-icon.svg"
+            alt="teamwork icon"
+          ></TechStackImage>
         </TechStack>
         <TechStack>
-          <TechStackImage src="https://t-dev.no/api/t-dev/noroff-icon.png"></TechStackImage>
+          <TechStackNoroff
+            src="https://t-dev.no/api/t-dev/noroff-icon.png"
+            alt="noroff icon"
+          ></TechStackNoroff>
         </TechStack>
         <TechStack>
-          <TechStackImageFeather src="https://t-dev.no/api/t-dev/feather-icon.svg"></TechStackImageFeather>
+          <TechStackImageFeather
+            src="https://t-dev.no/api/t-dev/feather-icon.svg"
+            alt="feather icon"
+          ></TechStackImageFeather>
         </TechStack>
       </TechStackContainer>
       <TechStackContainer>

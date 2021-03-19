@@ -44,7 +44,8 @@ const AboutMeParagraph = styled.p`
 
 const PortfolioImg = styled.img`
   padding-right: 40px;
-  height: 220px;
+  height: 244px;
+  width: 242px;
   @media (max-width: 800px) {
     padding: 0;
   }
@@ -57,7 +58,10 @@ function About({ portfolio }) {
       <OrangeLine></OrangeLine>
       {portfolio.map((items) => (
         <AboutMeBox key={items.About}>
-          <PortfolioImg src={items.Assets[6].trond}></PortfolioImg>
+          <PortfolioImg
+            src={items.Assets[6].trond}
+            alt="profile image"
+          ></PortfolioImg>
 
           <AboutMeText>
             <AboutMeParagraph style={{ fontWeight: "700" }}>

@@ -15,7 +15,7 @@ function projects({ projects }) {
 
 export default projects;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const projectRes = await fetch(
     `http://localhost:3000/api/portfolio/projects/`
   );
