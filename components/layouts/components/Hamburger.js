@@ -40,6 +40,8 @@ const HamburgerMenu = styled.div`
 `;
 
 function Hamburger() {
+  // Open and close hamburger
+
   const [open, setOpen] = useState(false);
 
   return (

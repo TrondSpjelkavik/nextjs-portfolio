@@ -66,12 +66,16 @@ const CopyrightText = styled.p`
 `;
 
 function Footer() {
+  // function to scroll smooth to the top.
+
   function toTheTopButton() {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   }
+
+  // Redirect to social websites
 
   function toGithub() {
     window.open("https://github.com/TrondSpjelkavik");

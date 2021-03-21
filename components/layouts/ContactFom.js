@@ -161,13 +161,21 @@ const SocialIconsContainerContact = styled.div`
 `;
 
 function ContactFom() {
+  // Opens new successfullySent
+
   const [send, setSend] = useState(false);
 
+  // react-hooks validation
+
   const { register, handleSubmit, errors } = useForm();
+
+  // onClick event onSubmit
 
   function sendEmail() {
     setSend(true);
   }
+
+  // redirects to social media
 
   function toGithub() {
     window.open("https://github.com/TrondSpjelkavik");

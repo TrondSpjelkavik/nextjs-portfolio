@@ -94,7 +94,7 @@
 
 ### GlobalLayout
 
-GlobalLayout includes <Meta>, <Nav>, <GlobalLayoutContainer> and <Footer> components.
+GlobalLayout includes Meta, Nav, GlobalLayoutContainer and Footer components.
 
 1. Meta
 
@@ -128,16 +128,13 @@ Contact form uses `react-hook-form` for validation. With the functions:
 The nav in projects uses call to internal API to change the active class, and changes the content in the projectContainer.
 
 - projectNumber makes a call to the API and changes the number in an API call ex:
-  `
-  projectNumber = 2
+  `projectNumber = 2`
   gives:
-  content[2].content from an API.
-
-  `
+  `content[2].content from an API.`
 
 3. Animation
 
-The animation uses <svg> and <path> with transform=matrix. It uses 1 circle and on 1/2 circle to create the effect that the leaf is behind the "globe".
+The animation uses svg and path with transform=matrix. It uses 1 circle and on 1/2 circle to create the effect that the leaf is behind the "globe".
 
 4. Chart
 
@@ -184,7 +181,7 @@ Using styled components in Nextjs can trow an warning, and to solve this we need
 
 Create a .babelrc and include:
 
-`
+```
 {
 "presets": ["next/babel"],
 "plugins": [
@@ -204,7 +201,7 @@ Create a .babelrc and include:
 ]
 }
 
-`
+```
 
 # Dependencies
 
@@ -246,3 +243,7 @@ and change the following code:
 To
 
 `fetch("${server}/api/portfolio/");`
+
+### Question?
+
+- trond.spjelkavik@gmail.com

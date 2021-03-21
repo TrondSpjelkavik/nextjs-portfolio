@@ -32,6 +32,8 @@ const HamburgerItems = styled.ul`
 function HamburgerList({ open, setOpen }) {
   const router = useRouter();
 
+  // Send the the user to About me container
+
   function toAboutMe() {
     setTimeout(() => {
       window.scrollTo({

@@ -23,6 +23,8 @@ const NavList = styled.ul`
 function Nav() {
   const router = useRouter();
 
+  // Sends the user to About me container
+
   function toAboutMe() {
     setTimeout(() => {
       window.scrollTo({

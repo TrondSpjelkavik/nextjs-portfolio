@@ -84,6 +84,8 @@ export const ProjectImage = styled.img`
 function Project({ projects, projectNumber }) {
   const [size, setSize] = useState(false);
 
+  // Class changes on API call.
+
   let siteText = "";
   let buttonClass = "";
 
